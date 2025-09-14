@@ -3,7 +3,12 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'WaifuHub',
-  description: 'A sleek retro-style landing page for WaifuHub',
+  description: 'Create and interact with AI-generated waifus',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
@@ -13,11 +18,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicoon.ico" sizes="any" />
-        <link rel="icon" href="/favicoon.ico" type="image/x-icon" />
-        <link rel="shortcut icon" href="/favicoon.ico" />
-      </head>
       <body>{children}</body>
     </html>
   )
