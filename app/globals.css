@@ -2695,7 +2695,7 @@ body {
     margin-top: 5px;
     margin-bottom: 10px;
     position: absolute;
-    bottom: -100px;
+    bottom: -80px;
     right: 50%;
     transform: translateX(50%);
     width: auto;
