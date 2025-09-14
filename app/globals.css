@@ -1548,10 +1548,6 @@ body {
     max-width: 900px;
     height: 85vh;
     background-color: #f5e6d3;
-    background-image: url('/WH-LOGO-POPUP.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     border: 4px solid #ff0000;
     z-index: 9999;
     animation: rainbowBorder 4s ease-in-out infinite;
@@ -1562,11 +1558,11 @@ body {
 .biography-section::after {
     content: '';
     position: absolute;
-    top: 60%;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px;
-    height: 100px;
+    width: 50%;
+    height: 120px;
     background-image: url('/WH-LOGO-POPUP.png');
     background-size: contain;
     background-repeat: no-repeat;
