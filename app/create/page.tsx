@@ -68,7 +68,7 @@ export default function CreatePage() {
 
   const handleTwitterClick = () => {
     console.log('Twitter button clicked');
-    window.open('https://twitter.com', '_blank');
+    window.open('https://x.com/waifu_xyz', '_blank');
   };
 
   const handlePhantomConnect = async () => {
