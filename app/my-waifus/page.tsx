@@ -139,7 +139,22 @@ export default function MyWaifusPage() {
             
             if (data.success && data.waifus && data.waifus.length > 0) {
               console.log('Loaded waifus from database:', data.waifus);
-              setWaifus(data.waifus);
+              
+              // Transform database waifus to match WaifuData interface
+              const transformedWaifus = data.waifus.map((waifu: any) => ({
+                id: waifu.id,
+                name: waifu.name,
+                personality: waifu.personality,
+                style: waifu.style,
+                hairColor: waifu.hair_color,
+                biography: waifu.biography || '',
+                characterProfile: waifu.character_profile,
+                videoUrl: waifu.video_url, // Transform video_url to videoUrl
+                createdAt: new Date(waifu.created_at),
+                isPublished: waifu.is_published
+              }));
+              
+              setWaifus(transformedWaifus);
               
               // Set published state based on database
               const publishedIds = new Set<string>(
