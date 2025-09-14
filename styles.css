@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5e6d3;
+    font-family: 'Press Start 2P', monospace;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo-container {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    filter: drop-shadow(2px 2px 0px #333) drop-shadow(4px 4px 0px #666);
+}
+
+.title-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    color: #000000;
+    text-shadow: 
+        2px 0px 0px #333,
+        4px 0px 0px #666,
+        6px 0px 0px #999,
+        8px 0px 0px #ccc,
+        10px 2px 0px #ddd,
+        12px 4px 0px #eee;
+    transform: skew(-15deg);
+    letter-spacing: 4px;
+    line-height: 1.2;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+}
+
+.retro-button {
+    background-color: #000000;
+    color: #f5e6d3;
+    border: 3px solid #333333;
+    padding: 15px 30px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: none;
+    box-shadow: 
+        3px 3px 0px #333,
+        6px 6px 0px #666;
+}
+
+.retro-button:hover {
+    background-color: #333333;
+    transform: translate(2px, 2px);
+    box-shadow: 
+        1px 1px 0px #333,
+        3px 3px 0px #666;
+}
+
+.retro-button:active {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 120px;
+    }
+    
+    .title {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+    
+    .buttons-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .retro-button {
+        font-size: 12px;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 100px;
+    }
+    
+    .logo-container {
+        margin-bottom: 20px;
+    }
+    
+    .title {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+}
